@@ -31,7 +31,7 @@ public class Book
         @Column
         @GeneratedValue(strategy = GenerationType.IDENTITY)
         @ApiModelProperty(value="书籍主键")
-        private int id;
+        private Integer id;
 
         @Column(name="book_name")
         @ApiModelProperty(value="书名")
@@ -43,11 +43,11 @@ public class Book
 
         @Column(name="level2_id")
         @ApiModelProperty(value="二级分类")
-        private int level2Id;
+        private Integer level2Id;
 
         @Column(name="copyright_id")
         @ApiModelProperty(value="版本")
-        private int copyrightId;
+        private Integer copyrightId;
 
         @Column(name="is_serialize")
         @ApiModelProperty(value="是否连载")
@@ -75,7 +75,7 @@ public class Book
 
         @Column(name="word_number")
         @ApiModelProperty(value="字数")
-        private int wordNumber;
+        private Integer wordNumber;
 
         @Column(name="is_online")
         @ApiModelProperty(value="状态")
@@ -87,7 +87,7 @@ public class Book
 
         @Column(name="revision")
         @ApiModelProperty(value="乐观锁")
-        private int revision;
+        private Integer revision;
 
         @Column(name="created_by")
         @ApiModelProperty(value="创建人")
