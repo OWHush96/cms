@@ -59,11 +59,11 @@ public class Book
 
         @Column(name="grant_start_time")
         @ApiModelProperty(value="授权开始时间",example="2021-12-12 13:32:00")
-        private Date grant_start_time;
+        private Date grantStartTime;
 
         @Column(name="grant_end_time")
         @ApiModelProperty(value="授权结束时间",example="2021-12-12 13:34:00")
-        private Date grant_end_time;
+        private Date grantEndTime;
 
         @Column(name="introduction")
         @ApiModelProperty(value="简介")

@@ -21,6 +21,7 @@ import java.util.List;
 @Api(tags="书籍管理")
 @RestController
 @RequestMapping("/cms/book")
+@CrossOrigin
 public class BookController {
 
     @Autowired
@@ -40,7 +41,8 @@ public class BookController {
         //调用service中的分页进行查询
         Page<Book> page=bookService.pageBook(bookQuery, pageNo, pageSize);
         long totalElements =page.getTotalElements();
-        return APICODE.OK().data("total",totalElements);
+        List<Book> list=page.getContent();
+        return APICODE.OK().data("total",totalElements).data("items",list);
     }
 
     @ApiOperation("添加书籍")
