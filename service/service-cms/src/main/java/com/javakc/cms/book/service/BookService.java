@@ -37,9 +37,26 @@ public class BookService extends BaseService<BookDao,Book> {
      * @return
      */
     public Page<Book> pageBook(BookQuery bookQuery, Integer pageNo, Integer pageSize){
+        /**
+         * 可用操作符
+         * =等值、!= 不等值（字符串、数字）
+         * >=、<=、>、<(数字)
+         * ge、le、gt、lt(字符串)
+         * ：表示like %v%
+         * l: 表示 v%
+         * :l 表示 %v
+         * null 表示 is null
+         * !null 表示 is not null
+         */
         SimpleSpecificationBuilder<Book> simpleSpecificationBuilder=new SimpleSpecificationBuilder<>();
         if(!StringUtils.isEmpty(bookQuery.getBookName())){
             simpleSpecificationBuilder.and("bookName",":",bookQuery.getBookName());
+        }
+        if(!StringUtils.isEmpty(bookQuery.getBeginDate())){
+            simpleSpecificationBuilder.and("grantStartTime","ge",bookQuery.getBeginDate());
+        }
+        if(!StringUtils.isEmpty(bookQuery.getEndDate())){
+            simpleSpecificationBuilder.and("grantStartTime","lt",bookQuery.getEndDate());
         }
         Page page = bookDao.findAll(simpleSpecificationBuilder.getSpecification(), PageRequest.of(pageNo-1,pageSize));
         return page;

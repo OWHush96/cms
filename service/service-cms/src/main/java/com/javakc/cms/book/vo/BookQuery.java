@@ -2,6 +2,8 @@ package com.javakc.cms.book.vo;
 
 import lombok.Data;
 
+import java.util.Date;
+
 /**
  * @Program:javakc-parent
  * @Author:Administrator
@@ -12,6 +14,10 @@ import lombok.Data;
 public class BookQuery {
 //    private int id;
     private String bookName;
+
+    private String beginDate;
+
+    private String endDate;
 //    private String author;
 //    private Byte isSerialize;
 //    private Byte isOnline;
