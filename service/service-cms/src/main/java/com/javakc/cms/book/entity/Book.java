@@ -41,6 +41,10 @@ public class Book
         @ApiModelProperty(value="作者")
         private String author;
 
+        @Column(name="level1_id")
+        @ApiModelProperty(value="一级分类")
+        private Integer level1Id;
+
         @Column(name="level2_id")
         @ApiModelProperty(value="二级分类")
         private Integer level2Id;

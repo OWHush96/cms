@@ -21,7 +21,8 @@ public class LoginController {
 
     @GetMapping("info")
     public APICODE info(){
-        return APICODE.OK().data("role","[admin]").data("name","admin").data("avatar","http://img0.imgth.bdimg.com/it/u=1782959667,617309577&fm=26&gp=O.jpg");
+//        return APICODE.OK().data("role","[admin]").data("name","admin").data("avatar","http://img0.imgth.bdimg.com/it/u=1782959667,617309577&fm=26&gp=O.jpg");
+        return APICODE.OK().data("role","[admin]").data("name","admin").data("avatar","http://owhush96.oss-cn-beijing.aliyuncs.com/image/2021/01/15/c32677fb004e45609a60e813e1b6721f.jpg");
     }
 }
 

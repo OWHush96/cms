@@ -32,8 +32,8 @@ public class BookController {
     @GetMapping
     public APICODE findAll(){
         // ## 调用service 的查询方法
-        List<Book> booklist=bookService.findAll();
-        return APICODE.OK().data("items",booklist);
+        List<Book> bookList=bookService.findAll();
+        return APICODE.OK().data("items",bookList);
     }
 
     @ApiOperation("根据条件进行分页查询 - 书籍管理")

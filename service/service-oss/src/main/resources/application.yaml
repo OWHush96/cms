@@ -12,6 +12,7 @@ aliyun:
   oss:
     file:
       endpoint: oss-cn-beijing.aliyuncs.com
-      keyid: LTAI4G63B2WuUUu7AwPZS210X
-      keysecret: YdwJVa3cZeVi76icf4mnhAe9yL8fci----无效的
-      bucketname: owhush96--无效的
+      keyid: LTAI4G63B2WuUUu7AwPZS21X
+      keysecret: YdwJVa3cZeVi76icf4mnhAe9yL8fci
+      bucketname: owhush96
+#      测试

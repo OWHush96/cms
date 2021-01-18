@@ -73,7 +73,7 @@ public class OssService {
         }
 
 
-        return null;
+        return uploadUrl;
     }
 }
 
